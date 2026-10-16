@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@font-face { font-family: "Clash Display"; src: url("/fonts/ClashDisplay-Semibold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Clash Display"; src: url("/fonts/ClashDisplay-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: Satoshi; src: url("/fonts/Satoshi-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: Satoshi; src: url("/fonts/Satoshi-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: Satoshi; src: url("/fonts/Satoshi-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: Satoshi; src: url("/fonts/Satoshi-Black.woff2") format("woff2"); font-weight: 900; font-display: swap; }
+@font-face { font-family: "JetBrains Mono"; src: url("/fonts/JetBrainsMono-Variable.woff2") format("woff2"); }
+
+:root { --ink:#161614; --bone:#f4f0e8; --paper:#faf8f3; --jade:#16a67a; --jade-dark:#087457; --muted:#78756d; --line:#dcd7cd; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--bone); color:var(--ink); font-family:Satoshi,system-ui,sans-serif; }
+body.dark-stage { background:var(--ink); }
+::selection { background:var(--jade); color:white; }
+a,button { -webkit-tap-highlight-color:transparent; }
+button { font:inherit; }
+.container { width:100%; max-width:72rem; margin-inline:auto; padding-inline:20px; }
+.display { font-family:"Clash Display",sans-serif; font-weight:700; letter-spacing:-.055em; }
+.mono { font-family:"JetBrains Mono",monospace; }
+.eyebrow { font-size:11px; letter-spacing:.18em; text-transform:uppercase; font-weight:700; }
+.section { scroll-margin-top:6rem; padding-block:5rem; }
+@media (min-width:768px){ .section{padding-block:7rem;} }
+.reveal { opacity:0; transform:translateY(18px); transition:opacity .62s cubic-bezier(.22,.72,.2,1),transform .62s cubic-bezier(.22,.72,.2,1); }
+.reveal.is-visible { opacity:1; transform:translateY(0); }
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none} *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;} }
+.focus-ring:focus-visible { outline:2px solid var(--jade); outline-offset:3px; }

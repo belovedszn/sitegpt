@@ -1,0 +1,2 @@
+import {Container} from "../ui"; import {Reveal} from "../Reveal";
+export function Testimonials(){return <section className="section bg-[#e8e1d5]"><Container><Reveal><div className="eyebrow">What teams need</div><blockquote className="display mt-8 max-w-5xl text-5xl leading-[.95] md:text-7xl">“The hard part of recurring payments is not charging someone. It is knowing exactly what happened afterwards.”</blockquote><div className="mt-8 mono text-xs uppercase tracking-[.16em] text-black/45">A product principle — not a customer claim</div></Reveal></Container></section>}
